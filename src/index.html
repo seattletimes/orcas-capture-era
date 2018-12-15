@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <%= t.include("partials/_head.html", grunt.data.json) %>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+ <%= t.include("partials/_gtm.html") %>
+  
+      <video class="bg" src="./assets/orca-video-background.mp4" autoplay playsinline loop muted></video>
+      <header class="splash">
+      <%= t.include("partials/_nav.html") %>
+      
+        <div class="headline">
+        <div class="section">
+        <p class="chatter" style="font-style: italic;">HOSTILE WATERS</p>
+          <h1>To Catch an Orca</h1>
+          <p class="chatter">Live killer whale captures in the Pacific Northwest during the 1960s and ’70s fueled a worldwide orca craze. Puget Sound was the primary source of supply. But a 1976 hunt for SeaWorld in Budd Inlet was a turning point, leading to the end of an era. Just one killer whale taken from Puget Sound survives today.</p>
+          <a href="#video" style="color:white">
+          <div class="start jump" style="text-align:center;">
+          <i class="fa fa-headphones" aria-hidden="true" style="color:white"></i> START        
+      </div>
+      <div class="sans warning" style="color:white;text-align:center;">Best listened to with headphones
+      <p><i class="fa fa-angle-down" aria-hidden="true" style="color:white;font-size:4em"></i></p></div>
+      </a>
+          </div>
+          
+<div class="section" >
+<div class="divider" ></div>
+  <div  id="video" class="bc-preroll">
+    <iframe src="//players.brightcove.net/1509317113/HklBo65Ukb_default/index.html?videoId=5974897230001" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
+    
+  </div>
+  <div class="divider"></div></div>
+
+<div class="section">
+        
+        <ul>
+        <li style="font-size:1.5em;font-style: italic;">CREDITS</li>
+        <li>Editing: Lauren Frohne</li>    
+        <li>Interviews: Lynda Mapes</li>    
+        <li>Cinematography: Steve Ringman, Ramon Dompor</li>
+        <li>Photo Research: Colin Diltz</li>
+        <br/>
+        <li>Archival Footage Courtesy of Ted Griffin, Michael Harris and Baby Wild Films</li>
+
+        <li>Archival Photos Courtesy of Game Department, Ralph Munro Papers, Washington State Archives</li>
+        <li>Additional Footage Courtesy of NOAA</li>
+        </ul>
+        </div>
+        <div class="divider"></div>
+        <%= t.include("partials/_ad.html", { type: "banner" }) %>
+        <%= t.include("partials/_dontMiss.html", { data: json.recirc }) %>
+        </header>
+<%= t.include("partials/_navBottom.html") %>
+
+    <script src="app.js" async></script>
+    <% if (json.project.production) { %>
+    <%= !json.project.embedded ? t.include("partials/_analytics.html") : "" %>
+    <%= t.include("partials/_workHere.html") %>
+    <% } %>
+  </body>
+</html>

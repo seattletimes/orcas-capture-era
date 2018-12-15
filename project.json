@@ -1,0 +1,20 @@
+{
+  "s3": {
+    "stage": {
+      "bucket": "projects-staging.seattletimes.com",
+      "path": "loosely-combative"
+    },
+    "live": {
+      "bucket": "projects.seattletimes.com",
+      "path": "/2018/to-catch-an-orca"
+    }
+  },
+  "title": "To Catch an Orca",
+  "description": "Live killer whale captures in the Pacific Northwest during the 1960s and ’70s fueled a worldwide orca craze. Puget Sound was the primary source of supply.",
+  "url": "https://projects.seattletimes.com/2018/to-catch-an-orca/",
+  "image": "assets/social.jpg",
+  "sheets": ["1J3Z-0xjMhnOyBC7gTzcDb-_4ozhiBdNG2ddsexaGlXE"],
+  "standout": false,
+  "embedded": false,
+  "production": true
+}

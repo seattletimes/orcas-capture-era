@@ -1,0 +1,151 @@
+@import "seattletimes";
+@import "bc-preroll";
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header {
+  height:1000px;
+  overflow-y:scroll;
+  scroll-behavior: smooth;
+}
+
+
+
+@media screen and (max-width:420px) { header {
+  height:1000px;
+  overflow-y:scroll;
+  scroll-behavior: smooth;
+  width:100%;
+  padding:0;
+} }
+
+header.splash{
+  position:relative;
+  width:100%;
+}
+
+.splash .headline {
+  position:absolute;
+  top:80px;
+  left:10%;
+  margin:0 auto;
+  opacity:0.8;
+  width:80%;
+  display:block;
+}
+
+.headline h1 {
+  font-size:5em;
+  text-transform:uppercase;
+  color:white;
+  text-align:center;
+}
+
+.headline .chatter {
+  font-size:1.5em;
+  color:white;
+  text-align:center;
+}
+
+@media screen and (max-width:420px) {
+  .headline h1 {font-size:2em;}
+  .headline .chatter {font-size:1em;}
+}
+
+ul li{
+  list-style-type: none;
+  color:white;
+  text-align:center;
+}
+
+.divider {
+  width:50%;
+  height:200px;
+  max-height:300px;
+}
+
+.padded div a{
+  color:white;
+}
+
+.sans {
+  font-family: @df-sans;
+  font-weight: 200;
+  letter-spacing: 0.06em;
+}
+
+.intro {
+  letter-spacing: 0.02em;
+
+  .jump {
+    font-size: 22px;
+    color:white;
+
+    a {
+      transition: all .3s linear;
+      letter-spacing: 0.1em;
+      
+
+      &:hover {
+        color: white;
+      }
+    }
+
+    &.start {
+      margin-top: 20px;
+    }
+  }
+
+.jump a {
+  color: white;
+}
+}
+
+.warning {
+  font-style: italic;
+  padding: 20px 0;
+  padding-top: 10px;
+  font-size: 13px;
+  color: white;
+  text-align:center;
+}
+
+
+@media (max-width:420px) {
+  .splash .headline {
+  position:relative;
+  top:0;
+  left:0;
+  margin:0  20px 0 20px;
+  opacity:1;
+  width:90%;
+  display:block;
+}
+}
+
+video.bg {
+
+  min-height: 100%;
+  min-width: 1024px;
+	
+
+  width: 100%;
+  height: auto;
+	
+
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  video.bg {
+    left: 50%;
+    margin-left: -512px;
+  }
+}
