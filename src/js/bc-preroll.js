@@ -1,16 +1,18 @@
 var $ = require("./lib/qsa");
 
+
 var makePlayer = function(id) {
-  return `
-<iframe src="//players.brightcove.net/1509317113/V1eCvUwO2g_default/index.html?videoId=${id}&autoplay=true" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
+ return `
+<iframe src="//cdn.jwplayer.com/players/${id}-mRGp7S2O.html" width="100%" height="100%" frameborder="0" scrolling="auto" style="position:absolute;" allowfullscreen></iframe>
 `;
 };
 
+
 $(".bc-preroll").forEach(function(container) {
-  var id = container.getAttribute("data-id");
-  var replace = function() {
-    container.innerHTML = makePlayer(id);
-    container.removeEventListener("click", replace);
-  };
-  container.addEventListener("click", replace);
+ var id = container.getAttribute("data-id");
+ var replace = function() {
+   container.innerHTML = makePlayer(id);
+   container.removeEventListener("click", replace);
+ };
+ container.addEventListener("click", replace);
 });
